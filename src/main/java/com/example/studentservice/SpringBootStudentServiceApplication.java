@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class SpringBootStudentServiceApplication {
 
-    @Value("${deployed}")
+    @Value("${deployed.from}")
     private String deployedFrom;
 
 
