@@ -60,30 +60,30 @@ az spring app deployment create \
     --service helloworldspringservice \
     --app studentservice \
     --name green \
-    --env deployed.from=AzureGreen
+    --env deployed.from=AzureGreen \
     --runtime-version Java_17 \
     --artifact-path target/student-service-0.0.1-SNAPSHOT.jar <br />
 
 then hit API --> https://helloworldspringservice.test.azuremicroservices.io/studentservice/green/echoStudentName/Anoop <br />
 
 
-## Blue green deployement 
-create two deployments first -- <br />
+## Blue green deployment <br /> 
+1) create two deployments first -- <br />
  az spring app deployment create --service helloworldspringservice --app studentservice --name blue --env deployed.from=greenAzure <br /> 
  az spring app deployment create --service helloworldspringservice --app studentservice --name green --env deployed.from=blueAzure <br />
  
- Set "blue" deployment as production from UI ( "set as production" option) <br />
+ 2) Set "blue" deployment as production from UI ( "set as production" option) <br />
  Deploy code to each deployment <br />
- az spring app deploy 
- --service helloworldspringservice 
- --name studentservice 
- --deployment blue 
+ az spring app deploy \
+ --service helloworldspringservice \ 
+ --name studentservice \
+ --deployment blue \
  --artifact-path target/student-service-0.0.1-SNAPSHOT.jar <br />
  
  hit API --> https://primary:6NUSgE0BH7RDw8h4cjidCdbbRaOSqbVbSivjIKfjTBkqKtI2OeQUEuj9rb0jAXbn@helloworldspringservice.test.azuremicroservices.io/echoStudentName/Anoop <br />
  Notice API does not have app name and deployment name <br />
  
- Now deploy app to green deployment ( staging deployment) -- <br /> 
+ 3) Now deploy app to green deployment ( staging deployment) -- <br /> 
  az spring app deploy \ 
   --service helloworldspringservice \ 
   --name studentservice \
@@ -94,9 +94,8 @@ create two deployments first -- <br />
  
 Notice API has app name and deployment name <br />
 
-
 Reference --> https://learn.microsoft.com/en-us/azure/spring-apps/how-to-staging-environment?WT.mc_id=Portal-AppPlatformExtension <br />
  
 # Find out 
-What is resourcegroup < br />
+What is resourcegroup <br />
 Difference between service name, app , deployment --> https://learn.microsoft.com/en-us/azure/spring-apps/concept-understand-app-and-deployment<br/>
