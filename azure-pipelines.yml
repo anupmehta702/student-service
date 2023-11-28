@@ -27,8 +27,5 @@ steps:
     Action: 'Deploy'
     AzureSpringCloud: '/subscriptions/0479e180-7a73-4954-bb1d-1f5e815990bd/resourceGroups/myPayAsYouGoSpringAppsSubscription/providers/Microsoft.AppPlatform/Spring/helloworldspringservice'
     AppName: 'studentservice'
-    UseStagingDeployment: false
-    CreateNewDeployment: true
-    DeploymentName: green
+    UseStagingDeployment: true
     Package: 'target/student-service-0.0.1-SNAPSHOT.jar'
-    EnvironmentVariables: 'deployed.from=green'
