@@ -19,7 +19,7 @@ public class SpringBootStudentServiceApplication {
 
 	@RequestMapping(value = "/echoStudentName/{name}")
 	public String echoStudentName(@PathVariable(name = "name") String name) {
-		return "Hello  " + name + " Responsed on : " + new Date()+" and deployed from :"+deployedFrom;
+		return "Hello " + name + " Responsed on :: " + new Date()+" and deployed from ::"+deployedFrom;
 	}
 
 	@RequestMapping(value = "/getStudentDetails/{name}")
