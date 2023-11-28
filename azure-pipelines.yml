@@ -30,5 +30,10 @@ steps:
     UseStagingDeployment: true
     Package: 'target/student-service-0.0.1-SNAPSHOT.jar'
     EnvironmentVariables: 'destination=fromGreens'
-  env:
-    destination: 'fromGreen'      
+- task: AzureSpringCloud@0
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(0479e180-7a73-4954-bb1d-1f5e815990bd)'
+    Action: 'Set Production'
+    AzureSpringCloud: '/subscriptions/0479e180-7a73-4954-bb1d-1f5e815990bd/resourceGroups/myPayAsYouGoSpringAppsSubscription/providers/Microsoft.AppPlatform/Spring/helloworldspringservice'
+    AppName: 'studentservice'
+    UseStagingDeployment: true
