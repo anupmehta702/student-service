@@ -29,5 +29,6 @@ steps:
     AppName: 'studentservice'
     UseStagingDeployment: true
     Package: 'target/student-service-0.0.1-SNAPSHOT.jar'
+    EnvironmentVariables: 'destination=fromGreens'
   env:
     destination: 'fromGreen'      
