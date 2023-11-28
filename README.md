@@ -11,7 +11,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
 # Azure notes
 1) Installed Azure CLI 
 2) Created resource group in region Central India - myPayAsYouGoSpringAppsSubscription
-3) Already created subscription - Pay-As-You-Go (0479e180-7a73-4954-bb1d-1f5e815990bd)
+3) Already created subscription - Pay-As-You-Go 
 
 Refer --> https://learn.microsoft.com/en-us/azure/spring-apps/quickstart?tabs=Azure-portal%2CAzure-CLI%2CConsumption-workload&pivots=sc-enterprise&tryIt=true&source=docs#code-try-42 <br />
 
@@ -22,21 +22,21 @@ output --> <br />
 [
   {
     "cloudName": "AzureCloud",
-    "homeTenantId": "c0865a08-7865-4091-809c-34e203a01746",
-    "id": "0479e180-7a73-4954-bb1d-1f5e815990bd",
+    "homeTenantId": "abc-abc-abc",
+    "id": "xyx-xyz-xyz",
     "isDefault": true,
     "managedByTenants": [],
     "name": "Pay-As-You-Go",
     "state": "Enabled",
-    "tenantId": "c0865a08-7865-4091-809c-34e203a01746",
+    "tenantId": "abc-abc-abc",
     "user": {
-      "name": "anupmehta702@gmail.com",
+      "name": "xyz.com",
       "type": "user"
     }
   }
 ]
 
- az account set --subscription 0479e180-7a73-4954-bb1d-1f5e815990bd <br />
+ az account set --subscription xyz-xyz-xyz <br />
  az configure --defaults location="centralindia" <br />
  az configure --defaults group="myPayAsYouGoSpringAppsSubscription" <br />
 
@@ -95,7 +95,8 @@ create two deployments first -- <br />
 Notice API has app name and deployment name <br />
 
 
-Reference --> https://learn.microsoft.com/en-us/azure/spring-apps/how-to-staging-environment?WT.mc_id=Portal-AppPlatformExtension <br /> 
+Reference --> https://learn.microsoft.com/en-us/azure/spring-apps/how-to-staging-environment?WT.mc_id=Portal-AppPlatformExtension <br />
+ 
 # Find out 
-What is resourcegroup < br/>
+What is resourcegroup < br />
 Difference between service name, app , deployment --> https://learn.microsoft.com/en-us/azure/spring-apps/concept-understand-app-and-deployment<br/>
