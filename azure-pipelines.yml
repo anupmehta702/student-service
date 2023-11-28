@@ -31,4 +31,4 @@ steps:
     CreateNewDeployment: true
     DeploymentName: green
     Package: 'target/student-service-0.0.1-SNAPSHOT.jar'
-    EnvironmentVariables: 'deployed.from=green'
+    EnvironmentVariables: 'deployed=green'
