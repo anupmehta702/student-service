@@ -15,3 +15,4 @@ Refer --> https://www.pluralsight.com/cloud-guru/labs/azure/building-apps-using-
 
 ## References 
 https://learn.microsoft.com/en-us/azure/spring-apps/how-to-cicd?pivots=programming-language-java <br />
+https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/azure-spring-cloud-v0?view=azure-pipelines --> for springApps devops task <br />

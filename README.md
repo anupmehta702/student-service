@@ -60,7 +60,7 @@ az spring app deployment create \
     --service helloworldspringservice \
     --app studentservice \
     --name green \
-    --env deployed.from=AzureGreen \
+    --env destination=AzureGreen \
     --runtime-version Java_17 \
     --artifact-path target/student-service-0.0.1-SNAPSHOT.jar <br />
 
@@ -69,8 +69,8 @@ then hit API --> https://helloworldspringservice.test.azuremicroservices.io/stud
 
 ## Blue green deployment <br /> 
 1) create two deployments first -- <br />
- az spring app deployment create --service helloworldspringservice --app studentservice --name blue --env deployed.from=greenAzure <br /> 
- az spring app deployment create --service helloworldspringservice --app studentservice --name green --env deployed.from=blueAzure <br />
+ az spring app deployment create --service helloworldspringservice --app studentservice --name blue --env destination=greenAzure <br /> 
+ az spring app deployment create --service helloworldspringservice --app studentservice --name green --env destination=blueAzure <br />
  
  2) Set "blue" deployment as production from UI ( "set as production" option) <br />
  Deploy code to each deployment <br />
